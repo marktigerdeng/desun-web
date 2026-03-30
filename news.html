@@ -67,66 +67,9 @@
             <button class="filter-btn">媒體報道</button>
         </div>
 
-        <div class="news-list">
-            <article class="news-list-item">
-                <div class="news-list-date">
-                    <span class="news-day">28</span>
-                    <span class="news-month">2026.03</span>
-                </div>
-                <div class="news-list-content">
-                    <span class="news-category">公司動態</span>
-                    <h3><a href="#">量化策略實盤運行，多策略組合穩健表現</a></h3>
-                    <p>數字金融板塊量化資管業務正式進入實盤階段，多策略組合在市場波動中保持穩健收益，資金費套利與期現套利策略持續貢獻穩定回報。</p>
-                </div>
-            </article>
-
-            <article class="news-list-item">
-                <div class="news-list-date">
-                    <span class="news-day">15</span>
-                    <span class="news-month">2026.02</span>
-                </div>
-                <div class="news-list-content">
-                    <span class="news-category">市場洞察</span>
-                    <h3><a href="#">加密量化資管市場深度調研報告發布</a></h3>
-                    <p>德商奇點科技研究團隊發布加密量化資管市場調研報告，深入分析行業競爭格局、客戶需求及合規路徑。</p>
-                </div>
-            </article>
-
-            <article class="news-list-item">
-                <div class="news-list-date">
-                    <span class="news-day">20</span>
-                    <span class="news-month">2025.12</span>
-                </div>
-                <div class="news-list-content">
-                    <span class="news-category">公司動態</span>
-                    <h3><a href="#">戰略入股高盈證券，打通多牌照合規通路</a></h3>
-                    <p>德商奇點科技完成對高盈證券的戰略投資，獲取香港 SFC 1/2/4/5/9 號牌照資質，為證券金融業務奠定合規基礎。</p>
-                </div>
-            </article>
-
-            <article class="news-list-item">
-                <div class="news-list-date">
-                    <span class="news-day">01</span>
-                    <span class="news-month">2025.10</span>
-                </div>
-                <div class="news-list-content">
-                    <span class="news-category">公司動態</span>
-                    <h3><a href="#">開曼基金架構搭建完成</a></h3>
-                    <p>成功完成開曼 Registered Fund 及 Security Registered Person 註冊，為國際機構投資者提供合規投資通道。</p>
-                </div>
-            </article>
-
-            <article class="news-list-item">
-                <div class="news-list-date">
-                    <span class="news-day">15</span>
-                    <span class="news-month">2025.06</span>
-                </div>
-                <div class="news-list-content">
-                    <span class="news-category">公司動態</span>
-                    <h3><a href="#">德商奇點科技正式成立</a></h3>
-                    <p>依托德商產投集團（HK.02270）深厚的產業資源與資管經驗，德商奇點科技在香港正式成立，啟動量化交易業務。</p>
-                </div>
-            </article>
+        <!-- 新闻列表：从 Google Sheets 动态加载 -->
+        <div class="news-list" id="newsList">
+            <div class="news-loading" style="text-align:center;padding:60px 0;color:#999;">載入中...</div>
         </div>
     </div>
 </section>
@@ -188,13 +131,110 @@ mobileMenuBtn.addEventListener('click', () => {
     mobileMenu.classList.toggle('active');
 });
 
-// Filter buttons
+// ============================================================
+// Google Sheets CMS 配置
+// 使用方法：
+// 1. 创建 Google Sheet，表头: date | category | title | summary | link
+//    date 格式: 2026-03-28
+//    category: 公司動態 / 市場洞察 / 媒體報道
+//    link: 可选，填外部链接(如公众号文章)则跳转，留空则不跳转
+// 2. 文件 → 共享 → 发布到网络 → CSV → 复制链接
+// 3. 粘贴到下方 SHEET_CSV_URL
+// ============================================================
+const SHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRtadHlK6XTAGlrIvaFzQLUqZn9pLDJsTTPHShOXGNc6h4OW6tOEXk01xaEiH8f_Hf9-caK1hAdgtI7/pub?output=csv';
+
+// 解析 CSV（处理引号内的逗号）
+function parseCSV(text) {
+    const lines = text.trim().split('\n');
+    if (lines.length < 2) return [];
+    const headers = lines[0].split(',').map(h => h.trim().replace(/^"|"$/g, ''));
+    return lines.slice(1).map(line => {
+        const values = [];
+        let current = '';
+        let inQuotes = false;
+        for (const char of line) {
+            if (char === '"') { inQuotes = !inQuotes; }
+            else if (char === ',' && !inQuotes) { values.push(current.trim()); current = ''; }
+            else { current += char; }
+        }
+        values.push(current.trim());
+        const obj = {};
+        headers.forEach((h, i) => obj[h] = values[i] || '');
+        return obj;
+    });
+}
+
+// 渲染新闻列表
+function renderNews(items) {
+    const container = document.getElementById('newsList');
+    if (!items.length) {
+        container.innerHTML = '<p style="text-align:center;padding:60px 0;color:#999;">暫無新聞</p>';
+        return;
+    }
+    container.innerHTML = items.map(item => {
+        const d = new Date(item.date);
+        const day = String(d.getDate()).padStart(2, '0');
+        const month = d.getFullYear() + '.' + String(d.getMonth() + 1).padStart(2, '0');
+        const href = item.link || '#';
+        const target = item.link ? ' target="_blank" rel="noopener"' : '';
+        return `
+        <article class="news-list-item" data-category="${item.category}">
+            <div class="news-list-date">
+                <span class="news-day">${day}</span>
+                <span class="news-month">${month}</span>
+            </div>
+            <div class="news-list-content">
+                <span class="news-category">${item.category}</span>
+                <h3><a href="${href}"${target}>${item.title}</a></h3>
+                <p>${item.summary}</p>
+            </div>
+        </article>`;
+    }).join('');
+}
+
+// 备用数据（Google Sheets 未配置或加载失败时显示）
+const FALLBACK_NEWS = [
+    { date: '2026-03-28', category: '公司動態', title: '量化策略實盤運行，多策略組合穩健表現', summary: '數字金融板塊量化資管業務正式進入實盤階段，多策略組合在市場波動中保持穩健收益，資金費套利與期現套利策略持續貢獻穩定回報。', link: '' },
+    { date: '2026-02-15', category: '市場洞察', title: '加密量化資管市場深度調研報告發布', summary: '德商奇點科技研究團隊發布加密量化資管市場調研報告，深入分析行業競爭格局、客戶需求及合規路徑。', link: '' },
+    { date: '2025-12-20', category: '公司動態', title: '戰略入股高盈證券，打通多牌照合規通路', summary: '德商奇點科技完成對高盈證券的戰略投資，獲取香港 SFC 1/2/4/5/9 號牌照資質，為證券金融業務奠定合規基礎。', link: '' },
+    { date: '2025-10-01', category: '公司動態', title: '開曼基金架構搭建完成', summary: '成功完成開曼 Registered Fund 及 Security Registered Person 註冊，為國際機構投資者提供合規投資通道。', link: '' },
+    { date: '2025-06-15', category: '公司動態', title: '德商奇點科技正式成立', summary: '依托德商產投集團（HK.02270）深厚的產業資源與資管經驗，德商奇點科技在香港正式成立，啟動量化交易業務。', link: '' }
+];
+
+let allNews = [];
+
+// 加载数据
+async function loadNews() {
+    if (SHEET_CSV_URL) {
+        try {
+            const res = await fetch(SHEET_CSV_URL);
+            const csv = await res.text();
+            allNews = parseCSV(csv).sort((a, b) => new Date(b.date) - new Date(a.date));
+        } catch (e) {
+            console.warn('Google Sheets 加載失敗，使用備用數據', e);
+            allNews = FALLBACK_NEWS;
+        }
+    } else {
+        allNews = FALLBACK_NEWS;
+    }
+    renderNews(allNews);
+}
+
+// 分类筛选
 document.querySelectorAll('.filter-btn').forEach(btn => {
     btn.addEventListener('click', () => {
         document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
+        const category = btn.textContent.trim();
+        if (category === '全部') {
+            renderNews(allNews);
+        } else {
+            renderNews(allNews.filter(n => n.category === category));
+        }
     });
 });
+
+loadNews();
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
