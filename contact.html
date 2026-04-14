@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>聯繫我們 | 德商奇點科技</title>
+    <meta name="description" content="聯繫德商奇點科技：預約諮詢、了解量化資管、TRS、場外期權及產業金融服務。">
+    <meta property="og:title" content="聯繫我們 | 德商奇點科技">
+    <meta property="og:description" content="期待與您探討合作機會">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="images/logo/logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -15,14 +20,15 @@
 <nav class="navbar scrolled" id="navbar">
     <div class="container nav-container">
         <a href="index.html" class="nav-logo">
+            <img src="images/logo/logo-white.png" alt="Desun Singularity" class="logo-img">
             <span class="logo-text">DESUN SINGULARITY</span>
         </a>
         <ul class="nav-links">
-            <li><a href="index.html">首頁</a></li>
-            <li><a href="products.html">產品與服務</a></li>
-            <li><a href="about.html">關於我們</a></li>
-            <li><a href="news.html">新聞動態</a></li>
-            <li><a href="contact.html" class="active">聯繫我們</a></li>
+            <li><a href="index.html" data-i18n="nav.home">首頁</a></li>
+            <li><a href="products.html" data-i18n="nav.products">產品與服務</a></li>
+            <li><a href="about.html" data-i18n="nav.about">關於我們</a></li>
+            <li><a href="news.html" data-i18n="nav.news">新聞動態</a></li>
+            <li><a href="contact.html" class="active" data-i18n="nav.contact">聯繫我們</a></li>
         </ul>
         <div class="nav-right">
             <div class="lang-switcher">
@@ -41,19 +47,19 @@
 
 <div class="mobile-menu" id="mobileMenu">
     <ul>
-        <li><a href="index.html">首頁</a></li>
-        <li><a href="products.html">產品與服務</a></li>
-        <li><a href="about.html">關於我們</a></li>
-        <li><a href="news.html">新聞動態</a></li>
-        <li><a href="contact.html">聯繫我們</a></li>
+        <li><a href="index.html" data-i18n="nav.home">首頁</a></li>
+        <li><a href="products.html" data-i18n="nav.products">產品與服務</a></li>
+        <li><a href="about.html" data-i18n="nav.about">關於我們</a></li>
+        <li><a href="news.html" data-i18n="nav.news">新聞動態</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">聯繫我們</a></li>
     </ul>
 </div>
 
 <!-- Page Hero -->
 <section class="page-hero">
     <div class="container">
-        <h1 class="page-hero-title">聯繫我們</h1>
-        <p class="page-hero-subtitle">期待與您探討合作機會</p>
+        <h1 class="page-hero-title" data-i18n="contact.hero_title">聯繫我們</h1>
+        <p class="page-hero-subtitle" data-i18n="contact.hero_subtitle">期待與您探討合作機會</p>
     </div>
 </section>
 
@@ -63,63 +69,63 @@
         <div class="contact-layout">
             <div class="contact-info">
                 <div class="contact-block">
-                    <h3>辦公地址</h3>
-                    <p>香港灣仔告士打道 38 號<br>萬通保險中心 1701</p>
+                    <h3 data-i18n="contact.office">辦公地址</h3>
+                    <p data-i18n-html="contact.address">香港灣仔告士打道 38 號<br>萬通保險中心 1701</p>
                 </div>
                 <div class="contact-block">
-                    <h3>電子郵件</h3>
+                    <h3 data-i18n="contact.email_title">電子郵件</h3>
                     <p><a href="mailto:contact@desunweb3.com">contact@desunweb3.com</a></p>
                 </div>
                 <div class="contact-block">
-                    <h3>社交媒體</h3>
+                    <h3 data-i18n="contact.social_title">社交媒體</h3>
                     <div class="social-links">
                         <a href="#" class="social-link">LinkedIn</a>
                         <a href="#" class="social-link">Twitter</a>
                         <a href="#" class="social-link">Telegram</a>
-                        <a href="#" class="social-link">微信公眾號</a>
+                        <a href="#" class="social-link" data-i18n="contact.social_wechat">微信公眾號</a>
                     </div>
                 </div>
             </div>
             <div class="contact-form-wrapper">
-                <h3>預約諮詢</h3>
+                <h3 data-i18n="contact.form_title">預約諮詢</h3>
                 <form class="contact-form" onsubmit="return false;">
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="name">姓名 *</label>
+                            <label for="name" data-i18n="contact.label_name">姓名 *</label>
                             <input type="text" id="name" required>
                         </div>
                         <div class="form-group">
-                            <label for="company">公司</label>
+                            <label for="company" data-i18n="contact.label_company">公司</label>
                             <input type="text" id="company">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="email">電郵 *</label>
+                            <label for="email" data-i18n="contact.label_email">電郵 *</label>
                             <input type="email" id="email" required>
                         </div>
                         <div class="form-group">
-                            <label for="phone">電話</label>
+                            <label for="phone" data-i18n="contact.label_phone">電話</label>
                             <input type="tel" id="phone">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="interest">感興趣的服務</label>
+                        <label for="interest" data-i18n="contact.label_interest">感興趣的服務</label>
                         <select id="interest">
-                            <option value="">請選擇</option>
-                            <option value="digital">數字金融 — 量化資管</option>
-                            <option value="digital-otc">數字金融 — 大宗交易</option>
-                            <option value="securities-trs">證券金融 — TRS</option>
-                            <option value="securities-options">證券金融 — 場外期權</option>
-                            <option value="industrial">產業金融</option>
-                            <option value="other">其他</option>
+                            <option value="" data-i18n="contact.option_select">請選擇</option>
+                            <option value="digital" data-i18n="contact.option_digital">數字金融 — 量化資管</option>
+                            <option value="digital-otc" data-i18n="contact.option_otc">數字金融 — 大宗交易</option>
+                            <option value="securities-trs" data-i18n="contact.option_trs">證券金融 — TRS</option>
+                            <option value="securities-options" data-i18n="contact.option_options">證券金融 — 場外期權</option>
+                            <option value="industrial" data-i18n="contact.option_industrial">產業金融</option>
+                            <option value="other" data-i18n="contact.option_other">其他</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="message">留言</label>
+                        <label for="message" data-i18n="contact.label_message">留言</label>
                         <textarea id="message" rows="5"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-full">提交諮詢</button>
+                    <button type="submit" class="btn btn-primary btn-full" data-i18n="contact.submit">提交諮詢</button>
                 </form>
             </div>
         </div>
@@ -131,32 +137,32 @@
     <div class="container">
         <div class="footer-grid">
             <div class="footer-col">
-                <h4 class="footer-heading">產品與服務</h4>
+                <h4 class="footer-heading" data-i18n="footer.products">產品與服務</h4>
                 <ul class="footer-links">
-                    <li><a href="products.html#digital">數字金融</a></li>
-                    <li><a href="products.html#securities">證券金融</a></li>
-                    <li><a href="products.html#industrial">產業金融</a></li>
+                    <li><a href="products.html#digital" data-i18n="footer.digital">數字金融</a></li>
+                    <li><a href="products.html#securities" data-i18n="footer.securities">證券金融</a></li>
+                    <li><a href="products.html#industrial" data-i18n="footer.industrial">產業金融</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4 class="footer-heading">關於我們</h4>
+                <h4 class="footer-heading" data-i18n="footer.about">關於我們</h4>
                 <ul class="footer-links">
-                    <li><a href="about.html">公司簡介</a></li>
-                    <li><a href="about.html#team">團隊介紹</a></li>
-                    <li><a href="about.html#compliance">合規與牌照</a></li>
-                    <li><a href="about.html#careers">招聘</a></li>
+                    <li><a href="about.html" data-i18n="footer.company">公司簡介</a></li>
+                    <li><a href="about.html#team" data-i18n="footer.team">團隊介紹</a></li>
+                    <li><a href="about.html#compliance" data-i18n="footer.compliance">合規與牌照</a></li>
+                    <li><a href="about.html#careers" data-i18n="footer.careers">招聘</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4 class="footer-heading">聯繫方式</h4>
+                <h4 class="footer-heading" data-i18n="footer.contact_heading">聯繫方式</h4>
                 <ul class="footer-links">
                     <li>contact@desunweb3.com</li>
-                    <li>香港灣仔告士打道 38 號</li>
-                    <li>萬通保險中心 1701</li>
+                    <li data-i18n="footer.address1">香港灣仔告士打道 38 號</li>
+                    <li data-i18n="footer.address2">萬通保險中心 1701</li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4 class="footer-heading">關注我們</h4>
+                <h4 class="footer-heading" data-i18n="footer.follow">關注我們</h4>
                 <ul class="footer-links">
                     <li><a href="#">LinkedIn</a></li>
                     <li><a href="#">Twitter</a></li>
@@ -165,16 +171,17 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 德商奇點科技 Desun Singularity Tech. All rights reserved.</p>
+            <p data-i18n="footer.copyright">&copy; 2026 德商奇點科技 Desun Singularity Tech. All rights reserved.</p>
             <div class="footer-legal">
-                <a href="#">風險提示</a>
-                <a href="#">隱私政策</a>
-                <a href="#">使用條款</a>
+                <a href="#" data-i18n="footer.risk">風險提示</a>
+                <a href="#" data-i18n="footer.privacy">隱私政策</a>
+                <a href="#" data-i18n="footer.terms">使用條款</a>
             </div>
         </div>
     </div>
 </footer>
 
+<script src="i18n.js"></script>
 <script>
 const mobileMenuBtn = document.getElementById('mobileMenuBtn');
 const mobileMenu = document.getElementById('mobileMenu');

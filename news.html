@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>新聞動態 | 德商奇點科技</title>
+    <meta name="description" content="德商奇點科技新聞動態：公司動態、市場洞察與媒體報道。">
+    <meta property="og:title" content="新聞動態 | 德商奇點科技">
+    <meta property="og:description" content="公司動態、市場洞察與媒體報道">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="images/logo/logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -15,14 +20,15 @@
 <nav class="navbar scrolled" id="navbar">
     <div class="container nav-container">
         <a href="index.html" class="nav-logo">
+            <img src="images/logo/logo-white.png" alt="Desun Singularity" class="logo-img">
             <span class="logo-text">DESUN SINGULARITY</span>
         </a>
         <ul class="nav-links">
-            <li><a href="index.html">首頁</a></li>
-            <li><a href="products.html">產品與服務</a></li>
-            <li><a href="about.html">關於我們</a></li>
-            <li><a href="news.html" class="active">新聞動態</a></li>
-            <li><a href="contact.html">聯繫我們</a></li>
+            <li><a href="index.html" data-i18n="nav.home">首頁</a></li>
+            <li><a href="products.html" data-i18n="nav.products">產品與服務</a></li>
+            <li><a href="about.html" data-i18n="nav.about">關於我們</a></li>
+            <li><a href="news.html" class="active" data-i18n="nav.news">新聞動態</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">聯繫我們</a></li>
         </ul>
         <div class="nav-right">
             <div class="lang-switcher">
@@ -41,19 +47,19 @@
 
 <div class="mobile-menu" id="mobileMenu">
     <ul>
-        <li><a href="index.html">首頁</a></li>
-        <li><a href="products.html">產品與服務</a></li>
-        <li><a href="about.html">關於我們</a></li>
-        <li><a href="news.html">新聞動態</a></li>
-        <li><a href="contact.html">聯繫我們</a></li>
+        <li><a href="index.html" data-i18n="nav.home">首頁</a></li>
+        <li><a href="products.html" data-i18n="nav.products">產品與服務</a></li>
+        <li><a href="about.html" data-i18n="nav.about">關於我們</a></li>
+        <li><a href="news.html" data-i18n="nav.news">新聞動態</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">聯繫我們</a></li>
     </ul>
 </div>
 
 <!-- Page Hero -->
 <section class="page-hero">
     <div class="container">
-        <h1 class="page-hero-title">新聞動態</h1>
-        <p class="page-hero-subtitle">公司動態、市場洞察與媒體報道</p>
+        <h1 class="page-hero-title" data-i18n="news.hero_title">新聞動態</h1>
+        <p class="page-hero-subtitle" data-i18n="news.hero_subtitle">公司動態、市場洞察與媒體報道</p>
     </div>
 </section>
 
@@ -61,10 +67,10 @@
 <section class="section section-white">
     <div class="container">
         <div class="news-filter">
-            <button class="filter-btn active">全部</button>
-            <button class="filter-btn">公司動態</button>
-            <button class="filter-btn">市場洞察</button>
-            <button class="filter-btn">媒體報道</button>
+            <button class="filter-btn active" data-i18n="news.filter_all">全部</button>
+            <button class="filter-btn" data-i18n="news.filter_company">公司動態</button>
+            <button class="filter-btn" data-i18n="news.filter_insights">市場洞察</button>
+            <button class="filter-btn" data-i18n="news.filter_press">媒體報道</button>
         </div>
 
         <!-- 新闻列表：从 Google Sheets 动态加载 -->
@@ -79,32 +85,32 @@
     <div class="container">
         <div class="footer-grid">
             <div class="footer-col">
-                <h4 class="footer-heading">產品與服務</h4>
+                <h4 class="footer-heading" data-i18n="footer.products">產品與服務</h4>
                 <ul class="footer-links">
-                    <li><a href="products.html#digital">數字金融</a></li>
-                    <li><a href="products.html#securities">證券金融</a></li>
-                    <li><a href="products.html#industrial">產業金融</a></li>
+                    <li><a href="products.html#digital" data-i18n="footer.digital">數字金融</a></li>
+                    <li><a href="products.html#securities" data-i18n="footer.securities">證券金融</a></li>
+                    <li><a href="products.html#industrial" data-i18n="footer.industrial">產業金融</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4 class="footer-heading">關於我們</h4>
+                <h4 class="footer-heading" data-i18n="footer.about">關於我們</h4>
                 <ul class="footer-links">
-                    <li><a href="about.html">公司簡介</a></li>
-                    <li><a href="about.html#team">團隊介紹</a></li>
-                    <li><a href="about.html#compliance">合規與牌照</a></li>
-                    <li><a href="about.html#careers">招聘</a></li>
+                    <li><a href="about.html" data-i18n="footer.company">公司簡介</a></li>
+                    <li><a href="about.html#team" data-i18n="footer.team">團隊介紹</a></li>
+                    <li><a href="about.html#compliance" data-i18n="footer.compliance">合規與牌照</a></li>
+                    <li><a href="about.html#careers" data-i18n="footer.careers">招聘</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4 class="footer-heading">聯繫方式</h4>
+                <h4 class="footer-heading" data-i18n="footer.contact_heading">聯繫方式</h4>
                 <ul class="footer-links">
                     <li>contact@desunweb3.com</li>
-                    <li>香港灣仔告士打道 38 號</li>
-                    <li>萬通保險中心 1701</li>
+                    <li data-i18n="footer.address1">香港灣仔告士打道 38 號</li>
+                    <li data-i18n="footer.address2">萬通保險中心 1701</li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4 class="footer-heading">關注我們</h4>
+                <h4 class="footer-heading" data-i18n="footer.follow">關注我們</h4>
                 <ul class="footer-links">
                     <li><a href="#">LinkedIn</a></li>
                     <li><a href="#">Twitter</a></li>
@@ -113,16 +119,17 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 德商奇點科技 Desun Singularity Tech. All rights reserved.</p>
+            <p data-i18n="footer.copyright">&copy; 2026 德商奇點科技 Desun Singularity Tech. All rights reserved.</p>
             <div class="footer-legal">
-                <a href="#">風險提示</a>
-                <a href="#">隱私政策</a>
-                <a href="#">使用條款</a>
+                <a href="#" data-i18n="footer.risk">風險提示</a>
+                <a href="#" data-i18n="footer.privacy">隱私政策</a>
+                <a href="#" data-i18n="footer.terms">使用條款</a>
             </div>
         </div>
     </div>
 </footer>
 
+<script src="i18n.js"></script>
 <script>
 const mobileMenuBtn = document.getElementById('mobileMenuBtn');
 const mobileMenu = document.getElementById('mobileMenu');
@@ -133,15 +140,14 @@ mobileMenuBtn.addEventListener('click', () => {
 
 // ============================================================
 // Google Sheets CMS 配置
-// 使用方法：
-// 1. 创建 Google Sheet，表头: date | category | title | summary | link
-//    date 格式: 2026-03-28
-//    category: 公司動態 / 市場洞察 / 媒體報道
-//    link: 可选，填外部链接(如公众号文章)则跳转，留空则不跳转
-// 2. 文件 → 共享 → 发布到网络 → CSV → 复制链接
-// 3. 粘贴到下方 SHEET_CSV_URL
+// 表头: date | lang | category | title | summary | link
+//   date: 2026-03-28
+//   lang: 繁 / 简 / EN（留空则所有语言都显示）
+//   category: 繁體→公司動態/市場洞察/媒體報道  简体→公司动态/市场洞察/媒体报道  EN→Company/Insights/Press
+//   link: 可选，填外部链接则跳转，留空不跳转
 // ============================================================
 const SHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRtadHlK6XTAGlrIvaFzQLUqZn9pLDJsTTPHShOXGNc6h4OW6tOEXk01xaEiH8f_Hf9-caK1hAdgtI7/pub?output=csv';
+let currentLang = (window.desunI18n && window.desunI18n.getLang()) || '繁';
 
 // 解析 CSV（处理引号内的逗号）
 function parseCSV(text) {
@@ -203,11 +209,19 @@ const FALLBACK_NEWS = [
 
 let allNews = [];
 
+// 按当前语言筛选新闻（lang 为空的条目所有语言都显示）
+function getFilteredNews() {
+    return allNews.filter(n => !n.lang || n.lang === currentLang);
+}
+
 // 加载数据
 async function loadNews() {
     if (SHEET_CSV_URL) {
         try {
-            const res = await fetch(SHEET_CSV_URL);
+            const controller = new AbortController();
+            const timeout = setTimeout(() => controller.abort(), 5000);
+            const res = await fetch(SHEET_CSV_URL, { signal: controller.signal });
+            clearTimeout(timeout);
             const csv = await res.text();
             allNews = parseCSV(csv).sort((a, b) => new Date(b.date) - new Date(a.date));
         } catch (e) {
@@ -217,21 +231,43 @@ async function loadNews() {
     } else {
         allNews = FALLBACK_NEWS;
     }
-    renderNews(allNews);
+    renderNews(getFilteredNews());
 }
 
 // 分类筛选
+const FILTER_LABELS = {
+    '繁': ['全部', '公司動態', '市場洞察', '媒體報道'],
+    '简': ['全部', '公司动态', '市场洞察', '媒体报道'],
+    'EN': ['All', 'Company', 'Insights', 'Press']
+};
+
+function updateFilterButtons() {
+    const labels = FILTER_LABELS[currentLang] || FILTER_LABELS['繁'];
+    document.querySelectorAll('.filter-btn').forEach((btn, i) => {
+        btn.textContent = labels[i] || btn.textContent;
+    });
+}
+
 document.querySelectorAll('.filter-btn').forEach(btn => {
     btn.addEventListener('click', () => {
         document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
+        const allLabel = (FILTER_LABELS[currentLang] || FILTER_LABELS['繁'])[0];
         const category = btn.textContent.trim();
-        if (category === '全部') {
-            renderNews(allNews);
+        if (category === allLabel) {
+            renderNews(getFilteredNews());
         } else {
-            renderNews(allNews.filter(n => n.category === category));
+            renderNews(getFilteredNews().filter(n => n.category === category));
         }
     });
+});
+
+// i18n 语言切换事件监听
+window.addEventListener('langchange', function(e) {
+    currentLang = e.detail.lang;
+    updateFilterButtons();
+    document.querySelectorAll('.filter-btn').forEach((b, i) => b.classList.toggle('active', i === 0));
+    renderNews(getFilteredNews());
 });
 
 loadNews();

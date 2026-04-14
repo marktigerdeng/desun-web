@@ -99,6 +99,11 @@ ul {
     gap: 12px;
 }
 
+.logo-img {
+    height: 32px;
+    width: auto;
+}
+
 .logo-text {
     font-family: var(--font-en);
     font-size: 16px;
@@ -218,8 +223,37 @@ ul {
     position: absolute;
     inset: 0;
     background:
-        radial-gradient(ellipse 80% 60% at 50% 40%, rgba(27, 61, 111, 0.2) 0%, transparent 70%),
-        radial-gradient(ellipse 40% 40% at 20% 80%, rgba(27, 61, 111, 0.08) 0%, transparent 60%);
+        radial-gradient(ellipse 80% 60% at 50% 40%, rgba(37, 99, 235, 0.15) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 40% at 20% 80%, rgba(37, 99, 235, 0.08) 0%, transparent 60%),
+        radial-gradient(ellipse 30% 30% at 80% 20%, rgba(59, 130, 246, 0.06) 0%, transparent 50%);
+    animation: heroBgFlow 12s ease-in-out infinite alternate;
+}
+
+@keyframes heroBgFlow {
+    0% { opacity: 0.8; transform: scale(1) translateY(0); }
+    50% { opacity: 1; transform: scale(1.05) translateY(-10px); }
+    100% { opacity: 0.8; transform: scale(1) translateY(0); }
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        radial-gradient(1px 1px at 10% 20%, rgba(255,255,255,0.15) 0%, transparent 100%),
+        radial-gradient(1px 1px at 30% 60%, rgba(255,255,255,0.1) 0%, transparent 100%),
+        radial-gradient(1px 1px at 50% 30%, rgba(255,255,255,0.12) 0%, transparent 100%),
+        radial-gradient(1px 1px at 70% 70%, rgba(255,255,255,0.08) 0%, transparent 100%),
+        radial-gradient(1px 1px at 90% 40%, rgba(255,255,255,0.1) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 15% 80%, rgba(255,255,255,0.06) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 85% 15%, rgba(255,255,255,0.06) 0%, transparent 100%);
+    animation: particleDrift 20s linear infinite;
+}
+
+@keyframes particleDrift {
+    0% { transform: translateY(0) translateX(0); }
+    50% { transform: translateY(-20px) translateX(10px); }
+    100% { transform: translateY(0) translateX(0); }
 }
 
 .hero-content {
@@ -1442,5 +1476,293 @@ ul {
 
     .footer-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+/* ========================================
+   Enhanced Design - V2 Updates
+   ======================================== */
+
+/* --- Team Card: Photo + Expand --- */
+.team-avatar-img {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 20px;
+    display: block;
+    border: 3px solid var(--gray-100);
+    transition: all 0.3s ease;
+}
+
+.team-card {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+    border-radius: 8px;
+}
+
+.team-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+    border-color: var(--gray-100);
+}
+
+.team-card:hover .team-avatar-img {
+    border-color: var(--blue);
+    box-shadow: 0 0 0 4px var(--blue-glow);
+}
+
+.team-bio-detail {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.3s ease;
+    opacity: 0;
+}
+
+.team-bio-detail ul {
+    list-style: disc;
+    text-align: left;
+    padding-left: 18px;
+    margin-top: 8px;
+}
+
+.team-bio-detail ul li {
+    font-size: 12px;
+    color: var(--gray-600);
+    line-height: 1.7;
+    margin-bottom: 4px;
+}
+
+.team-card.expanded .team-bio-detail {
+    max-height: 300px;
+    opacity: 1;
+}
+
+.team-expand-hint {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 12px;
+    color: var(--blue);
+    transition: all 0.2s;
+}
+
+.team-card.expanded .team-expand-hint {
+    transform: rotate(180deg) translateY(-2px);
+}
+
+.team-card.expanded .team-expand-hint::after {
+    content: ' ↑';
+}
+
+/* --- News Card Clickable --- */
+.news-card-clickable {
+    display: block;
+    padding: 32px 24px;
+    border-top: 2px solid var(--black);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.news-card-clickable:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.1);
+    background: var(--white);
+    border-radius: 4px;
+}
+
+.news-card-clickable:hover .news-title {
+    color: var(--blue);
+}
+
+.news-card-clickable:hover .news-link {
+    opacity: 1;
+    transform: translateX(4px);
+}
+
+.news-source {
+    display: inline-block;
+    font-size: 11px;
+    color: var(--blue);
+    border: 1px solid var(--blue);
+    padding: 2px 10px;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+    border-radius: 2px;
+}
+
+.news-card-clickable .news-link {
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+/* --- News List Item Hover --- */
+.news-list-item {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    padding: 32px 16px;
+    border-radius: 4px;
+}
+
+.news-list-item:hover {
+    background: rgba(37, 99, 235, 0.03);
+    transform: translateX(4px);
+}
+
+.news-list-item:hover h3 a {
+    color: var(--blue);
+}
+
+/* --- Compliance Partners Badges --- */
+.compliance-partners {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 48px;
+}
+
+.partner-badge {
+    padding: 12px 24px;
+    border: 1px solid var(--gray-100);
+    font-size: 13px;
+    color: var(--gray-600);
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    background: var(--white-off);
+    border-radius: 4px;
+}
+
+.partner-badge:hover {
+    border-color: var(--blue);
+    color: var(--blue);
+    background: var(--blue-glow);
+    transform: translateY(-2px);
+}
+
+/* --- Enhanced Service Cards (glassmorphism) --- */
+.service-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+}
+
+.service-card:hover {
+    background: var(--white);
+    border-color: var(--blue);
+    box-shadow: 0 12px 48px rgba(37, 99, 235, 0.12);
+    transform: translateY(-6px);
+}
+
+.service-detail-grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 768px) {
+    .service-detail-grid-3 {
+        grid-template-columns: 1fr;
+    }
+}
+
+.service-detail-card {
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background: var(--white);
+}
+
+.service-detail-card:hover {
+    border-color: var(--blue);
+    box-shadow: 0 8px 32px rgba(37, 99, 235, 0.08);
+    transform: translateY(-2px);
+}
+
+/* --- Enhanced Data Cards --- */
+.data-card {
+    transition: all 0.3s ease;
+}
+
+.data-card:hover {
+    background: var(--black-light);
+}
+
+.data-card:hover .data-number,
+.data-card:hover .data-number-text {
+    color: var(--blue-light);
+}
+
+/* --- Why Cards Hover --- */
+.why-card {
+    transition: all 0.3s ease;
+}
+
+.why-card:hover {
+    background: var(--black-light);
+    transform: translateY(-2px);
+}
+
+/* --- Section Divider Decorations --- */
+.section-header::after {
+    content: '';
+    display: block;
+    width: 48px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--blue), var(--blue-light));
+    margin: 20px auto 0;
+    border-radius: 2px;
+}
+
+/* --- Page Hero Enhanced --- */
+.page-hero {
+    background: linear-gradient(135deg, var(--black) 0%, #0d1b2a 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.page-hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(37, 99, 235, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+/* --- Smooth Scroll Section Animations --- */
+.section {
+    transform: translateY(40px);
+    transition: opacity 1s cubic-bezier(0.22, 1, 0.36, 1), transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* --- Highlight Items Enhanced --- */
+.highlight-item {
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.highlight-item:hover {
+    border-color: var(--blue);
+    box-shadow: 0 8px 24px rgba(37, 99, 235, 0.08);
+    transform: translateY(-2px);
+}
+
+/* --- Responsive for new elements --- */
+@media (max-width: 768px) {
+    .compliance-partners {
+        justify-content: center;
+    }
+
+    .team-card.expanded .team-bio-detail {
+        max-height: 400px;
+    }
+
+    .team-avatar-img {
+        width: 72px;
+        height: 72px;
+    }
+
+    .logo-img {
+        height: 24px;
     }
 }

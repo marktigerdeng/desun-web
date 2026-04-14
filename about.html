@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>關於我們 | 德商奇點科技</title>
+    <meta name="description" content="了解德商奇點科技：上市公司背書、多牌照合規運營、專業核心團隊，橫跨實體與數字的全品類資產管理。">
+    <meta property="og:title" content="關於我們 | 德商奇點科技">
+    <meta property="og:description" content="上市公司背書、多牌照合規運營、2000億+在管資產">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="images/logo/logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -15,14 +20,15 @@
 <nav class="navbar scrolled" id="navbar">
     <div class="container nav-container">
         <a href="index.html" class="nav-logo">
+            <img src="images/logo/logo-white.png" alt="Desun Singularity" class="logo-img">
             <span class="logo-text">DESUN SINGULARITY</span>
         </a>
         <ul class="nav-links">
-            <li><a href="index.html">首頁</a></li>
-            <li><a href="products.html">產品與服務</a></li>
-            <li><a href="about.html" class="active">關於我們</a></li>
-            <li><a href="news.html">新聞動態</a></li>
-            <li><a href="contact.html">聯繫我們</a></li>
+            <li><a href="index.html" data-i18n="nav.home">首頁</a></li>
+            <li><a href="products.html" data-i18n="nav.products">產品與服務</a></li>
+            <li><a href="about.html" class="active" data-i18n="nav.about">關於我們</a></li>
+            <li><a href="news.html" data-i18n="nav.news">新聞動態</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">聯繫我們</a></li>
         </ul>
         <div class="nav-right">
             <div class="lang-switcher">
@@ -42,19 +48,19 @@
 <!-- Mobile Menu -->
 <div class="mobile-menu" id="mobileMenu">
     <ul>
-        <li><a href="index.html">首頁</a></li>
-        <li><a href="products.html">產品與服務</a></li>
-        <li><a href="about.html">關於我們</a></li>
-        <li><a href="news.html">新聞動態</a></li>
-        <li><a href="contact.html">聯繫我們</a></li>
+        <li><a href="index.html" data-i18n="nav.home">首頁</a></li>
+        <li><a href="products.html" data-i18n="nav.products">產品與服務</a></li>
+        <li><a href="about.html" data-i18n="nav.about">關於我們</a></li>
+        <li><a href="news.html" data-i18n="nav.news">新聞動態</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">聯繫我們</a></li>
     </ul>
 </div>
 
 <!-- Page Hero -->
 <section class="page-hero">
     <div class="container">
-        <h1 class="page-hero-title">關於我們</h1>
-        <p class="page-hero-subtitle">橫跨實體與數字的全品類資產管理機構</p>
+        <h1 class="page-hero-title" data-i18n="about.hero_title">關於我們</h1>
+        <p class="page-hero-subtitle" data-i18n="about.hero_subtitle">橫跨實體與數字的全品類資產管理機構</p>
     </div>
 </section>
 
@@ -64,9 +70,9 @@
         <div class="about-intro">
             <div class="about-intro-content">
                 <div class="product-label">About Us</div>
-                <h2>香港德商奇點科技有限公司</h2>
+                <h2 data-i18n="about.company_name">香港德商奇點科技有限公司</h2>
                 <p class="about-intro-en">Desun Singularity Tech</p>
-                <p class="about-intro-desc">
+                <p class="about-intro-desc" data-i18n="about.company_desc">
                     德商奇點科技是德商產投服務（HK.02270）旗下科技金融平台，
                     定位為橫跨產業、證券與數字金融的全品類資產管理機構。
                     依托母公司 2000 億+ 實體資產管理經驗、香港多牌照合規優勢及 AI + Web3 技術驅動，
@@ -76,19 +82,19 @@
             <div class="about-highlights">
                 <div class="highlight-item">
                     <div class="highlight-value">HK.02270</div>
-                    <div class="highlight-label">上市公司背書</div>
+                    <div class="highlight-label" data-i18n="about.highlight_listed">上市公司背書</div>
                 </div>
                 <div class="highlight-item">
                     <div class="highlight-value">2000億+</div>
-                    <div class="highlight-label">在管資產規模</div>
+                    <div class="highlight-label" data-i18n="about.highlight_aum">在管資產規模</div>
                 </div>
                 <div class="highlight-item">
                     <div class="highlight-value">5項</div>
-                    <div class="highlight-label">SFC 牌照</div>
+                    <div class="highlight-label" data-i18n="about.highlight_sfc">SFC 牌照</div>
                 </div>
                 <div class="highlight-item">
                     <div class="highlight-value">10年+</div>
-                    <div class="highlight-label">團隊平均經驗</div>
+                    <div class="highlight-label" data-i18n="about.highlight_exp">團隊平均經驗</div>
                 </div>
             </div>
         </div>
@@ -99,44 +105,44 @@
 <section class="section section-dark" id="compliance">
     <div class="container">
         <div class="section-header">
-            <h2 class="section-title">多牌照合規運營</h2>
+            <h2 class="section-title" data-i18n="about.compliance_title">多牌照合規運營</h2>
         </div>
         <div class="compliance-grid">
             <div class="compliance-group">
-                <h3 class="compliance-region">香港 SFC</h3>
+                <h3 class="compliance-region" data-i18n="about.compliance_hk">香港 SFC</h3>
                 <div class="license-list">
                     <div class="license-item">
                         <span class="license-num">1 號牌</span>
-                        <span class="license-scope">證券交易</span>
+                        <span class="license-scope" data-i18n="about.license1_scope">證券交易</span>
                     </div>
                     <div class="license-item">
                         <span class="license-num">2 號牌</span>
-                        <span class="license-scope">期貨合約交易</span>
+                        <span class="license-scope" data-i18n="about.license2_scope">期貨合約交易</span>
                     </div>
                     <div class="license-item">
                         <span class="license-num">4 號牌</span>
-                        <span class="license-scope">就證券提供意見</span>
+                        <span class="license-scope" data-i18n="about.license4_scope">就證券提供意見</span>
                     </div>
                     <div class="license-item">
                         <span class="license-num">5 號牌</span>
-                        <span class="license-scope">就期貨合約提供意見</span>
+                        <span class="license-scope" data-i18n="about.license5_scope">就期貨合約提供意見</span>
                     </div>
                     <div class="license-item">
                         <span class="license-num">9 號牌</span>
-                        <span class="license-scope">提供資產管理</span>
+                        <span class="license-scope" data-i18n="about.license9_scope">提供資產管理</span>
                     </div>
                 </div>
             </div>
             <div class="compliance-group">
-                <h3 class="compliance-region">開曼群島</h3>
+                <h3 class="compliance-region" data-i18n="about.compliance_cayman">開曼群島</h3>
                 <div class="license-list">
                     <div class="license-item">
                         <span class="license-num">Registered Fund</span>
-                        <span class="license-scope">開曼註冊基金，面向專業投資者</span>
+                        <span class="license-scope" data-i18n="about.cayman_fund_scope">開曼註冊基金，面向專業投資者</span>
                     </div>
                     <div class="license-item">
                         <span class="license-num">SRP</span>
-                        <span class="license-scope">Securities Registered Person — 證券業務註冊機構</span>
+                        <span class="license-scope" data-i18n="about.cayman_srp_scope">Securities Registered Person — 證券業務註冊機構</span>
                     </div>
                 </div>
             </div>
@@ -148,50 +154,100 @@
 <section class="section section-white" id="team">
     <div class="container">
         <div class="section-header">
-            <h2 class="section-title">核心團隊</h2>
+            <h2 class="section-title" data-i18n="about.team_title">核心團隊</h2>
         </div>
         <div class="team-grid">
-            <div class="team-card">
-                <div class="team-avatar">FC</div>
+            <div class="team-card" onclick="this.classList.toggle('expanded')">
+                <img src="images/team/finkel.png" alt="Finkel Chang" class="team-avatar-img">
                 <h3 class="team-name">Finkel Chang</h3>
                 <div class="team-role">CEO</div>
-                <p class="team-bio">10 年 Web3 全產業鏈經驗，Web3.Pro 創始人</p>
+                <p class="team-bio" data-i18n="about.team_fc_bio">會計和市場營銷學士，商業碩士，具備財務、市場與戰略複合知識體系</p>
+                <div class="team-bio-detail" data-i18n-html="about.team_fc_detail">
+                    <ul>
+                        <li>十年 Web3 全產業鏈經驗（礦業/CEX/公鏈），專長於跨國合規、運營與增長</li>
+                        <li>Web3.Pro 創始人，沸星科技合夥人</li>
+                    </ul>
+                </div>
+                <span class="team-expand-hint" data-i18n="about.team_expand">了解更多 ↓</span>
             </div>
-            <div class="team-card">
-                <div class="team-avatar">LD</div>
+            <div class="team-card" onclick="this.classList.toggle('expanded')">
+                <img src="images/team/lily.png" alt="Lily Duan" class="team-avatar-img">
                 <h3 class="team-name">Lily Duan</h3>
                 <div class="team-role">COO</div>
-                <p class="team-bio">6 年 Web3，前加拿大上市公司副總裁</p>
+                <p class="team-bio" data-i18n="about.team_ld_bio">新聞學碩士，6 年 Web3 行業經驗</p>
+                <div class="team-bio-detail" data-i18n-html="about.team_ld_detail">
+                    <ul>
+                        <li>曾任加拿大上市公司副總裁（10年+），主導多項核心業務板塊的戰略規劃與全面運營管理</li>
+                        <li>全球 TOP5 交易所首席商務官 & SaaS 業務 Co-founder（6年+）</li>
+                    </ul>
+                </div>
+                <span class="team-expand-hint" data-i18n="about.team_expand">了解更多 ↓</span>
             </div>
-            <div class="team-card">
-                <div class="team-avatar">JZ</div>
+            <div class="team-card" onclick="this.classList.toggle('expanded')">
+                <img src="images/team/joy.png" alt="Joy Zhou" class="team-avatar-img">
                 <h3 class="team-name">Joy Zhou</h3>
                 <div class="team-role">CMO</div>
-                <p class="team-bio">8 年 Web3，香港最大 Web3 媒體聯合創立人</p>
+                <p class="team-bio" data-i18n="about.team_jz_bio">英碩，8 年 Web3 從業經歷，多家頭部機構高管經驗</p>
+                <div class="team-bio-detail" data-i18n-html="about.team_jz_detail">
+                    <ul>
+                        <li>曾於 2019 年服務於國資軍工集團負責供應鏈金融區塊鏈產業解決方案</li>
+                        <li>2020 年成為 IPFS 全球龍頭企業合夥人</li>
+                        <li>2023 年聯合創立香港最大 Web3 媒體</li>
+                    </ul>
+                </div>
+                <span class="team-expand-hint" data-i18n="about.team_expand">了解更多 ↓</span>
             </div>
-            <div class="team-card">
-                <div class="team-avatar">MD</div>
+            <div class="team-card" onclick="this.classList.toggle('expanded')">
+                <img src="images/team/mark.png" alt="Mark Deng" class="team-avatar-img">
                 <h3 class="team-name">Mark Deng</h3>
                 <div class="team-role">CTO</div>
-                <p class="team-bio">8 年 Web3，前頭部交易所首席產品官</p>
+                <p class="team-bio" data-i18n="about.team_md_bio">曾任全球頭部交易所首席產品官，8 年 Web3 行業經驗</p>
+                <div class="team-bio-detail" data-i18n-html="about.team_md_detail">
+                    <ul>
+                        <li>連續創業於 DeFi，深諳 CEX、DEX 與錢包的機制與約束，專注撮合效率、流動性質量與風險控制</li>
+                        <li>產品累計服務 200 萬用戶，資產管理規模超 5 億美元</li>
+                    </ul>
+                </div>
+                <span class="team-expand-hint" data-i18n="about.team_expand">了解更多 ↓</span>
             </div>
-            <div class="team-card">
-                <div class="team-avatar">HL</div>
+            <div class="team-card" onclick="this.classList.toggle('expanded')">
+                <img src="images/team/herman.png" alt="Herman Lin" class="team-avatar-img">
                 <h3 class="team-name">Herman Lin</h3>
                 <div class="team-role">CIO</div>
-                <p class="team-bio">10 年金融投資，量化基金創始人</p>
+                <p class="team-bio" data-i18n="about.team_hl_bio">麥考瑞大學應用金融專業</p>
+                <div class="team-bio-detail" data-i18n-html="about.team_hl_detail">
+                    <ul>
+                        <li>君道量化基金管理有限公司執行董事（創始人）</li>
+                        <li>十年金融領域投資經驗，擅長場外期權結構設計規劃，為高淨值客戶打造全方位資產配置</li>
+                    </ul>
+                </div>
+                <span class="team-expand-hint" data-i18n="about.team_expand">了解更多 ↓</span>
             </div>
-            <div class="team-card">
-                <div class="team-avatar">GZ</div>
+            <div class="team-card" onclick="this.classList.toggle('expanded')">
+                <img src="images/team/gibson.png" alt="Gibson Zhu" class="team-avatar-img">
                 <h3 class="team-name">Gibson Zhu</h3>
-                <div class="team-role">首席策略師</div>
-                <p class="team-bio">10 年量化交易，證券金融與加密雙棲</p>
+                <div class="team-role" data-i18n="about.team_gz_role">首席策略師</div>
+                <p class="team-bio" data-i18n="about.team_gz_bio">新加坡南洋理工大學，量化交易 10 年經驗</p>
+                <div class="team-bio-detail" data-i18n-html="about.team_gz_detail">
+                    <ul>
+                        <li>在傳統金融和加密貨幣領域均有豐富的實戰經驗</li>
+                        <li>擅長捕捉市場定價偏差，通過多市場、多品種的套利策略實現穩定收益</li>
+                    </ul>
+                </div>
+                <span class="team-expand-hint" data-i18n="about.team_expand">了解更多 ↓</span>
             </div>
-            <div class="team-card">
-                <div class="team-avatar">VG</div>
+            <div class="team-card" onclick="this.classList.toggle('expanded')">
+                <img src="images/team/vicky.png" alt="Vicky Gu" class="team-avatar-img">
                 <h3 class="team-name">Vicky Gu</h3>
-                <div class="team-role">首席分析師</div>
-                <p class="team-bio">CFA，13 年市場研究經驗</p>
+                <div class="team-role" data-i18n="about.team_vg_role">首席分析師</div>
+                <p class="team-bio" data-i18n="about.team_vg_bio">麥考瑞大學應用金融專業，CFA</p>
+                <div class="team-bio-detail" data-i18n-html="about.team_vg_detail">
+                    <ul>
+                        <li>市場技術面研究和反轉策略研發 13 年經驗</li>
+                        <li>擅長通過多維度數據挖掘市場情緒指標，識別極端情緒下的反轉機會，在量化模型構建和機器學習應用方面有深入研究</li>
+                    </ul>
+                </div>
+                <span class="team-expand-hint" data-i18n="about.team_expand">了解更多 ↓</span>
             </div>
         </div>
     </div>
@@ -201,28 +257,28 @@
 <section class="section section-light" id="milestones">
     <div class="container">
         <div class="section-header">
-            <h2 class="section-title">發展里程碑</h2>
+            <h2 class="section-title" data-i18n="about.milestones_title">發展里程碑</h2>
         </div>
         <div class="timeline">
             <div class="timeline-item">
                 <div class="timeline-date">2025 Q2</div>
                 <div class="timeline-content">
-                    <h3>公司成立</h3>
-                    <p>德商奇點科技在香港正式成立，量化業務啟動</p>
+                    <h3 data-i18n="about.ms1_title">公司成立</h3>
+                    <p data-i18n="about.ms1_desc">德商奇點科技在香港正式成立，量化業務啟動</p>
                 </div>
             </div>
             <div class="timeline-item">
                 <div class="timeline-date">2025 Q4</div>
                 <div class="timeline-content">
-                    <h3>戰略入股高盈證券</h3>
-                    <p>獲取香港 SFC 多牌照通路，打通合規基礎</p>
+                    <h3 data-i18n="about.ms2_title">戰略入股高盈證券</h3>
+                    <p data-i18n="about.ms2_desc">獲取香港 SFC 多牌照通路，打通合規基礎</p>
                 </div>
             </div>
             <div class="timeline-item">
                 <div class="timeline-date">2026 Q1</div>
                 <div class="timeline-content">
-                    <h3>業務全面推進</h3>
-                    <p>量化策略實盤運行，實體資管數字化升級啟動</p>
+                    <h3 data-i18n="about.ms3_title">業務全面推進</h3>
+                    <p data-i18n="about.ms3_desc">量化策略實盤運行，實體資管數字化升級啟動</p>
                 </div>
             </div>
         </div>
@@ -233,9 +289,9 @@
 <section class="section section-dark" id="careers">
     <div class="container">
         <div class="careers-content">
-            <h2>加入我們</h2>
-            <p>我們正在尋找對金融科技充滿熱情的夥伴，一起構建下一代資產管理平台</p>
-            <a href="contact.html" class="btn btn-primary">查看開放職位</a>
+            <h2 data-i18n="about.careers_title">加入我們</h2>
+            <p data-i18n="about.careers_desc">我們正在尋找對金融科技充滿熱情的夥伴，一起構建下一代資產管理平台</p>
+            <a href="contact.html" class="btn btn-primary" data-i18n="about.careers_cta">查看開放職位</a>
         </div>
     </div>
 </section>
@@ -245,32 +301,32 @@
     <div class="container">
         <div class="footer-grid">
             <div class="footer-col">
-                <h4 class="footer-heading">產品與服務</h4>
+                <h4 class="footer-heading" data-i18n="footer.products">產品與服務</h4>
                 <ul class="footer-links">
-                    <li><a href="products.html#digital">數字金融</a></li>
-                    <li><a href="products.html#securities">證券金融</a></li>
-                    <li><a href="products.html#industrial">產業金融</a></li>
+                    <li><a href="products.html#digital" data-i18n="footer.digital">數字金融</a></li>
+                    <li><a href="products.html#securities" data-i18n="footer.securities">證券金融</a></li>
+                    <li><a href="products.html#industrial" data-i18n="footer.industrial">產業金融</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4 class="footer-heading">關於我們</h4>
+                <h4 class="footer-heading" data-i18n="footer.about">關於我們</h4>
                 <ul class="footer-links">
-                    <li><a href="about.html">公司簡介</a></li>
-                    <li><a href="about.html#team">團隊介紹</a></li>
-                    <li><a href="about.html#compliance">合規與牌照</a></li>
-                    <li><a href="about.html#careers">招聘</a></li>
+                    <li><a href="about.html" data-i18n="footer.company">公司簡介</a></li>
+                    <li><a href="about.html#team" data-i18n="footer.team">團隊介紹</a></li>
+                    <li><a href="about.html#compliance" data-i18n="footer.compliance">合規與牌照</a></li>
+                    <li><a href="about.html#careers" data-i18n="footer.careers">招聘</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4 class="footer-heading">聯繫方式</h4>
+                <h4 class="footer-heading" data-i18n="footer.contact_heading">聯繫方式</h4>
                 <ul class="footer-links">
                     <li>contact@desunweb3.com</li>
-                    <li>香港灣仔告士打道 38 號</li>
-                    <li>萬通保險中心 1701</li>
+                    <li data-i18n="footer.address1">香港灣仔告士打道 38 號</li>
+                    <li data-i18n="footer.address2">萬通保險中心 1701</li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4 class="footer-heading">關注我們</h4>
+                <h4 class="footer-heading" data-i18n="footer.follow">關注我們</h4>
                 <ul class="footer-links">
                     <li><a href="#">LinkedIn</a></li>
                     <li><a href="#">Twitter</a></li>
@@ -279,16 +335,17 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 德商奇點科技 Desun Singularity Tech. All rights reserved.</p>
+            <p data-i18n="footer.copyright">&copy; 2026 德商奇點科技 Desun Singularity Tech. All rights reserved.</p>
             <div class="footer-legal">
-                <a href="#">風險提示</a>
-                <a href="#">隱私政策</a>
-                <a href="#">使用條款</a>
+                <a href="#" data-i18n="footer.risk">風險提示</a>
+                <a href="#" data-i18n="footer.privacy">隱私政策</a>
+                <a href="#" data-i18n="footer.terms">使用條款</a>
             </div>
         </div>
     </div>
 </footer>
 
+<script src="i18n.js"></script>
 <script>
 const mobileMenuBtn = document.getElementById('mobileMenuBtn');
 const mobileMenu = document.getElementById('mobileMenu');

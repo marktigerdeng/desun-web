@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>產品與服務 | 德商奇點科技</title>
+    <meta name="description" content="德商奇點科技產品與服務：數字金融量化資管、證券金融 TRS 與場外期權、產業金融資產運營與退出。">
+    <meta property="og:title" content="產品與服務 | 德商奇點科技">
+    <meta property="og:description" content="數字金融、證券金融、產業金融三大業務板塊">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="images/logo/logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -15,14 +20,15 @@
 <nav class="navbar scrolled" id="navbar">
     <div class="container nav-container">
         <a href="index.html" class="nav-logo">
+            <img src="images/logo/logo-white.png" alt="Desun Singularity" class="logo-img">
             <span class="logo-text">DESUN SINGULARITY</span>
         </a>
         <ul class="nav-links">
-            <li><a href="index.html">首頁</a></li>
-            <li><a href="products.html" class="active">產品與服務</a></li>
-            <li><a href="about.html">關於我們</a></li>
-            <li><a href="news.html">新聞動態</a></li>
-            <li><a href="contact.html">聯繫我們</a></li>
+            <li><a href="index.html" data-i18n="nav.home">首頁</a></li>
+            <li><a href="products.html" class="active" data-i18n="nav.products">產品與服務</a></li>
+            <li><a href="about.html" data-i18n="nav.about">關於我們</a></li>
+            <li><a href="news.html" data-i18n="nav.news">新聞動態</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">聯繫我們</a></li>
         </ul>
         <div class="nav-right">
             <div class="lang-switcher">
@@ -42,19 +48,19 @@
 <!-- Mobile Menu -->
 <div class="mobile-menu" id="mobileMenu">
     <ul>
-        <li><a href="index.html">首頁</a></li>
-        <li><a href="products.html">產品與服務</a></li>
-        <li><a href="about.html">關於我們</a></li>
-        <li><a href="news.html">新聞動態</a></li>
-        <li><a href="contact.html">聯繫我們</a></li>
+        <li><a href="index.html" data-i18n="nav.home">首頁</a></li>
+        <li><a href="products.html" data-i18n="nav.products">產品與服務</a></li>
+        <li><a href="about.html" data-i18n="nav.about">關於我們</a></li>
+        <li><a href="news.html" data-i18n="nav.news">新聞動態</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">聯繫我們</a></li>
     </ul>
 </div>
 
 <!-- Page Hero -->
 <section class="page-hero">
     <div class="container">
-        <h1 class="page-hero-title">產品與服務</h1>
-        <p class="page-hero-subtitle">橫跨數字金融、證券金融與產業金融，為機構和專業投資者提供全方位服務</p>
+        <h1 class="page-hero-title" data-i18n="products.hero_title">產品與服務</h1>
+        <p class="page-hero-subtitle" data-i18n="products.hero_subtitle">橫跨數字金融、證券金融與產業金融，為機構和專業投資者提供全方位服務</p>
     </div>
 </section>
 
@@ -62,9 +68,9 @@
 <div class="product-nav-bar">
     <div class="container">
         <div class="product-nav">
-            <a href="#digital" class="product-nav-item active">數字金融</a>
-            <a href="#securities" class="product-nav-item">證券金融</a>
-            <a href="#industrial" class="product-nav-item">產業金融</a>
+            <a href="#digital" class="product-nav-item active" data-i18n="products.nav_digital">數字金融</a>
+            <a href="#securities" class="product-nav-item" data-i18n="products.nav_securities">證券金融</a>
+            <a href="#industrial" class="product-nav-item" data-i18n="products.nav_industrial">產業金融</a>
         </div>
     </div>
 </div>
@@ -74,51 +80,67 @@
     <div class="container">
         <div class="product-header">
             <div class="product-label">Digital Finance</div>
-            <h2 class="product-title">數字金融</h2>
-            <p class="product-tagline">深耕加密市場，系統化創造收益</p>
-            <p class="product-desc">以量化策略和專業交易能力，在加密市場為客戶實現穩健回報</p>
+            <h2 class="product-title" data-i18n="products.digital_title">數字金融</h2>
+            <p class="product-tagline" data-i18n="products.digital_tagline">深耕加密市場，系統化創造收益</p>
+            <p class="product-desc" data-i18n="products.digital_desc">以量化策略和專業交易能力，在加密市場為客戶實現穩健回報</p>
         </div>
 
         <div class="product-content">
-            <h3 class="content-heading">核心服務</h3>
+            <h3 class="content-heading" data-i18n="products.digital_core">核心服務</h3>
             <div class="service-detail-grid">
                 <div class="service-detail-card">
-                    <h4>量化資管</h4>
-                    <p>市場中性策略為主，資金費套利、期現套利、跨所套利、多策略組合</p>
+                    <h4 data-i18n="products.digital_s1_title">量化資管 — 複合中性套利框架</h4>
+                    <p data-i18n="products.digital_s1_desc">四維覆蓋：期現套利、期期套利、資金費率套利、波動率套利。市場中性策略（Delta≈0），多策略組合分散風險。</p>
                 </div>
                 <div class="service-detail-card">
-                    <h4>大宗交易</h4>
-                    <p>大額數字資產買賣執行，深度流動性，低滑點</p>
+                    <h4 data-i18n="products.digital_s2_title">大宗交易（OTC）</h4>
+                    <p data-i18n="products.digital_s2_desc">大額數字資產買賣執行，深度流動性、低滑點，覆蓋 Binance、Deribit、OKX 等主流交易所。</p>
                 </div>
             </div>
 
-            <h3 class="content-heading">服務特點</h3>
+            <h3 class="content-heading" data-i18n="products.digital_exec">策略執行優勢</h3>
+            <div class="service-detail-grid service-detail-grid-3">
+                <div class="service-detail-card">
+                    <h4 data-i18n="products.digital_e1_title">低延遲 | Low Latency</h4>
+                    <p data-i18n="products.digital_e1_desc">Co-location 部署，信號→成交毫秒級；自研智能訂單路由，對沖雙腿同步執行，7×24 全自動</p>
+                </div>
+                <div class="service-detail-card">
+                    <h4 data-i18n="products.digital_e2_title">廣覆蓋 | Full Spectrum</h4>
+                    <p data-i18n="products.digital_e2_desc">20+ 幣種 × 多交易所 × 全期限結構同時掃描；數十組參數並行，覆蓋 4h ~ 90d 持倉週期；市場狀態自適應</p>
+                </div>
+                <div class="service-detail-card">
+                    <h4 data-i18n="products.digital_e3_title">高精度 | High Precision</h4>
+                    <p data-i18n="products.digital_e3_desc">改進 CIR 模型計算理論基差置信區間；改進 ARCH 模型動態預測價差波動率；流動性探針 + 協整驗證，雙重過濾假信號</p>
+                </div>
+            </div>
+
+            <h3 class="content-heading" data-i18n="products.digital_moat">技術護城河</h3>
             <div class="feature-grid">
                 <div class="feature-item">
                     <div class="feature-num">01</div>
-                    <h4>系統化決策</h4>
-                    <p>基於數據和模型，排除情緒干擾</p>
+                    <h4 data-i18n="products.digital_f1_title">全棧自研引擎</h4>
+                    <p data-i18n="products.digital_f1_desc">全鏈路自主研發，非第三方拼裝，歷經完整牛熊週期驗證</p>
                 </div>
                 <div class="feature-item">
                     <div class="feature-num">02</div>
-                    <h4>多策略組合</h4>
-                    <p>策略間低相關性，分散單一策略風險</p>
+                    <h4 data-i18n="products.digital_f2_title">多層定價系統</h4>
+                    <p data-i18n="products.digital_f2_desc">CIR + ARCH + MJD/Bates 三層模型協同覆蓋三大策略，每日自動校準參數</p>
                 </div>
                 <div class="feature-item">
                     <div class="feature-num">03</div>
-                    <h4>全天候監控</h4>
-                    <p>7×24 實時風控，毫秒級響應</p>
+                    <h4 data-i18n="products.digital_f3_title">實時風控框架</h4>
+                    <p data-i18n="products.digital_f3_desc">事前壓力測試 + 事中 Greeks ���控與熔斷 + 事後歸因與偏差分析</p>
                 </div>
                 <div class="feature-item">
                     <div class="feature-num">04</div>
-                    <h4>合規運營</h4>
-                    <p>持牌機構管理，資金安全透明</p>
+                    <h4 data-i18n="products.digital_f4_title">反脆弱特性</h4>
+                    <p data-i18n="products.digital_f4_desc">市場劇烈波動時策略反而受益 — 基差擴大 + 波動率飆升 = 增量套利機會</p>
                 </div>
             </div>
         </div>
 
         <div class="product-cta">
-            <a href="contact.html" class="btn btn-primary">聯繫我們了解更多</a>
+            <a href="contact.html" class="btn btn-primary" data-i18n="products.digital_cta">聯繫我們了解更多</a>
         </div>
     </div>
 </section>
@@ -128,51 +150,67 @@
     <div class="container">
         <div class="product-header">
             <div class="product-label">Securities Finance</div>
-            <h2 class="product-title">證券金融</h2>
-            <p class="product-tagline">靈活定制的場外衍生品方案</p>
-            <p class="product-desc">依托多牌照合規優勢，為機構和專業投資者提供場外衍生品服務</p>
+            <h2 class="product-title" data-i18n="products.securities_title">證券金融</h2>
+            <p class="product-tagline" data-i18n="products.securities_tagline">結構設計 + 策略能力驅動的場外衍生品方案</p>
+            <p class="product-desc" data-i18n="products.securities_desc">不只是渠道與費率優勢 — 我們的核心差異在於結構設計能力和交易策略，為客戶構建最優的風險收益結構</p>
         </div>
 
         <div class="product-content">
-            <h3 class="content-heading">核心服務</h3>
+            <h3 class="content-heading" data-i18n="products.securities_core">核心服務</h3>
             <div class="service-detail-grid">
                 <div class="service-detail-card">
-                    <h4>TRS（總收益互換）</h4>
-                    <p>場外衍生品通道，應用於槓桿管理、跨境資產配置、稅務優化</p>
+                    <h4 data-i18n="products.securities_s1_title">TRS（總收益互換）</h4>
+                    <p data-i18n="products.securities_s1_desc">標的覆蓋全市場 A 股（~5000 只），支持 1:3 槓桿、受益人匿名、多幣種結算。基於客戶目標設計最優敞口結構，而非僅提供通道。</p>
                 </div>
                 <div class="service-detail-card">
-                    <h4>場外期權</h4>
-                    <p>定制化期權策略，應用於風險對沖、收益增強、結構化投資</p>
+                    <h4 data-i18n="products.securities_s2_title">場外期權</h4>
+                    <p data-i18n="products.securities_s2_desc">完全定制化期權結構設計：掛鈎 A 股、港股及海外標的，策略覆蓋方向性、波動率與結構化收益，支持本金保護與條件觸發。</p>
                 </div>
             </div>
 
-            <h3 class="content-heading">服務特點</h3>
+            <h3 class="content-heading" data-i18n="products.securities_highlights">核心優勢</h3>
+            <div class="service-detail-grid service-detail-grid-3">
+                <div class="service-detail-card">
+                    <h4 data-i18n="products.securities_e1_title">觀點驅動</h4>
+                    <p data-i18n="products.securities_e1_desc">客戶的市場觀點、風險預算和回報目標，我們轉化為精確的風險收益結構 — 保本、槓桿、增強或對沖，一單到位</p>
+                </div>
+                <div class="service-detail-card">
+                    <h4 data-i18n="products.securities_e2_title">獨立定價</h4>
+                    <p data-i18n="products.securities_e2_desc">自有量化定價模型驅動，在期權估值、Greeks 計算和結構拆解上具備獨立判斷，不依賴對手方報價，確保公允價格</p>
+                </div>
+                <div class="service-detail-card">
+                    <h4 data-i18n="products.securities_e3_title">靈活封裝</h4>
+                    <p data-i18n="products.securities_e3_desc">同樣的策略意圖可封裝為 TRS、期權、結構化票據或組合方案，根據賬戶結構和合規要求選擇最合適的載體</p>
+                </div>
+            </div>
+
+            <h3 class="content-heading" data-i18n="products.securities_capabilities">能力體系</h3>
             <div class="feature-grid">
                 <div class="feature-item">
                     <div class="feature-num">01</div>
-                    <h4>定制化方案</h4>
-                    <p>根據客戶需求設計交易結構</p>
+                    <h4 data-i18n="products.securities_f1_title">TRS 通道</h4>
+                    <p data-i18n="products.securities_f1_desc">全市場 A 股覆蓋（遠超陸股通），靈活槓桿、費率透明、多幣種結算</p>
                 </div>
                 <div class="feature-item">
                     <div class="feature-num">02</div>
-                    <h4>專業團隊</h4>
-                    <p>豐富的衍生品交易經驗</p>
+                    <h4 data-i18n="products.securities_f2_title">期權結構設計</h4>
+                    <p data-i18n="products.securities_f2_desc">方向性、波動率、收益增強、尾部對沖 — 根據客戶觀點定制期權組合與觸發條件</p>
                 </div>
                 <div class="feature-item">
                     <div class="feature-num">03</div>
-                    <h4>合規通道</h4>
-                    <p>香港 SFC 持牌機構執行，法律框架清晰</p>
+                    <h4 data-i18n="products.securities_f3_title">風險管理</h4>
+                    <p data-i18n="products.securities_f3_desc">Greeks 實時監控、動態對沖執行、壓力情景分析，幫助客戶管理組合風險</p>
                 </div>
                 <div class="feature-item">
                     <div class="feature-num">04</div>
-                    <h4>高效結算</h4>
-                    <p>流程透明，結算及時</p>
+                    <h4 data-i18n="products.securities_f4_title">一站式服務</h4>
+                    <p data-i18n="products.securities_f4_desc">從需求分析、結構設計、執行交易到存續管理，專業團隊全程跟進</p>
                 </div>
             </div>
         </div>
 
         <div class="product-cta">
-            <a href="contact.html" class="btn btn-primary">聯繫交易團隊</a>
+            <a href="contact.html" class="btn btn-primary" data-i18n="products.securities_cta">聯繫交易團隊</a>
         </div>
     </div>
 </section>
@@ -182,55 +220,55 @@
     <div class="container">
         <div class="product-header">
             <div class="product-label">Industrial Finance</div>
-            <h2 class="product-title">產業金融</h2>
-            <p class="product-tagline">被低估資產的價值重構者</p>
-            <p class="product-desc">聚焦被低估的城市資產，通過價值發現、運營增值與資本化退出的完整閉環，釋放存量資產價值</p>
+            <h2 class="product-title" data-i18n="products.industrial_title">產業金融</h2>
+            <p class="product-tagline" data-i18n="products.industrial_tagline">被低估資產的價值重構者</p>
+            <p class="product-desc" data-i18n="products.industrial_desc">聚焦被低估的城市資產，通過價值發現、運營增值與資本化退出的完整閉環，釋放存量資產價值</p>
         </div>
 
         <div class="product-content">
-            <h3 class="content-heading">核心服務</h3>
+            <h3 class="content-heading" data-i18n="products.industrial_core">核心服務</h3>
             <div class="service-detail-grid">
                 <div class="service-detail-card">
-                    <h4>價值發現</h4>
-                    <p>挖掘停車資產、商業空間、能源網絡等隱藏現金流</p>
+                    <h4 data-i18n="products.industrial_s1_title">價值發現</h4>
+                    <p data-i18n="products.industrial_s1_desc">挖掘停車資產、商業空間、能源網絡等隱藏現金流</p>
                 </div>
                 <div class="service-detail-card">
-                    <h4>價值運營</h4>
-                    <p>AI 智腦降本增效 + 區塊鏈可信賬本重建信任，驅動收入增長</p>
+                    <h4 data-i18n="products.industrial_s2_title">價值運營</h4>
+                    <p data-i18n="products.industrial_s2_desc">AI 智腦降本增效 + 區塊鏈可信賬本重建信任，驅動收入增長</p>
                 </div>
                 <div class="service-detail-card">
-                    <h4>價值變現</h4>
-                    <p>通過 REITs、ABS、RWA 代幣化、產業並購實現資本化退出</p>
+                    <h4 data-i18n="products.industrial_s3_title">價值變現</h4>
+                    <p data-i18n="products.industrial_s3_desc">通過 REITs、ABS、RWA 代幣化、產業並購實現資本化退出</p>
                 </div>
             </div>
 
-            <h3 class="content-heading">服務特點</h3>
+            <h3 class="content-heading" data-i18n="products.industrial_features">服務特點</h3>
             <div class="feature-grid">
                 <div class="feature-item">
                     <div class="feature-num">01</div>
-                    <h4>2000億+在管</h4>
-                    <p>依托母公司德商產投 (HK.02270) 深厚資管經驗</p>
+                    <h4 data-i18n="products.industrial_f1_title">2000億+在管</h4>
+                    <p data-i18n="products.industrial_f1_desc">依托母公司德商產投 (HK.02270) 深厚資管經驗</p>
                 </div>
                 <div class="feature-item">
                     <div class="feature-num">02</div>
-                    <h4>完整閉環</h4>
-                    <p>發現 → 運營 → 退出 → 循環投入</p>
+                    <h4 data-i18n="products.industrial_f2_title">完整閉環</h4>
+                    <p data-i18n="products.industrial_f2_desc">發現 → 運營 → 退出 → 循環投入</p>
                 </div>
                 <div class="feature-item">
                     <div class="feature-num">03</div>
-                    <h4>技術驅動</h4>
-                    <p>AI + 區塊鏈雙引擎，運營成本降低 33%</p>
+                    <h4 data-i18n="products.industrial_f3_title">技術驅動</h4>
+                    <p data-i18n="products.industrial_f3_desc">AI + 區塊鏈雙引擎，運營成本降低 33%</p>
                 </div>
                 <div class="feature-item">
                     <div class="feature-num">04</div>
-                    <h4>多元退出</h4>
-                    <p>REITs / ABS / RWA / 並購，靈活選擇</p>
+                    <h4 data-i18n="products.industrial_f4_title">多元退出</h4>
+                    <p data-i18n="products.industrial_f4_desc">REITs / ABS / RWA / 並購，靈活選擇</p>
                 </div>
             </div>
         </div>
 
         <div class="product-cta">
-            <a href="contact.html" class="btn btn-primary">了解更多</a>
+            <a href="contact.html" class="btn btn-primary" data-i18n="products.industrial_cta">了解更多</a>
         </div>
     </div>
 </section>
@@ -240,32 +278,32 @@
     <div class="container">
         <div class="footer-grid">
             <div class="footer-col">
-                <h4 class="footer-heading">產品與服務</h4>
+                <h4 class="footer-heading" data-i18n="footer.products">產品與服務</h4>
                 <ul class="footer-links">
-                    <li><a href="products.html#digital">數字金融</a></li>
-                    <li><a href="products.html#securities">證券金融</a></li>
-                    <li><a href="products.html#industrial">產業金融</a></li>
+                    <li><a href="products.html#digital" data-i18n="footer.digital">數字金融</a></li>
+                    <li><a href="products.html#securities" data-i18n="footer.securities">證券金融</a></li>
+                    <li><a href="products.html#industrial" data-i18n="footer.industrial">產業金融</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4 class="footer-heading">關於我們</h4>
+                <h4 class="footer-heading" data-i18n="footer.about">關於我們</h4>
                 <ul class="footer-links">
-                    <li><a href="about.html">公司簡介</a></li>
-                    <li><a href="about.html#team">團隊介紹</a></li>
-                    <li><a href="about.html#compliance">合規與牌照</a></li>
-                    <li><a href="about.html#careers">招聘</a></li>
+                    <li><a href="about.html" data-i18n="footer.company">公司簡介</a></li>
+                    <li><a href="about.html#team" data-i18n="footer.team">團隊介紹</a></li>
+                    <li><a href="about.html#compliance" data-i18n="footer.compliance">合規與牌照</a></li>
+                    <li><a href="about.html#careers" data-i18n="footer.careers">招聘</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4 class="footer-heading">聯繫方式</h4>
+                <h4 class="footer-heading" data-i18n="footer.contact_heading">聯繫方式</h4>
                 <ul class="footer-links">
                     <li>contact@desunweb3.com</li>
-                    <li>香港灣仔告士打道 38 號</li>
-                    <li>萬通保險中心 1701</li>
+                    <li data-i18n="footer.address1">香港灣仔告士打道 38 號</li>
+                    <li data-i18n="footer.address2">萬通保險中心 1701</li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4 class="footer-heading">關注我們</h4>
+                <h4 class="footer-heading" data-i18n="footer.follow">關注我們</h4>
                 <ul class="footer-links">
                     <li><a href="#">LinkedIn</a></li>
                     <li><a href="#">Twitter</a></li>
@@ -274,16 +312,17 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 德商奇點科技 Desun Singularity Tech. All rights reserved.</p>
+            <p data-i18n="footer.copyright">&copy; 2026 德商奇點科技 Desun Singularity Tech. All rights reserved.</p>
             <div class="footer-legal">
-                <a href="#">風險提示</a>
-                <a href="#">隱私政策</a>
-                <a href="#">使用條款</a>
+                <a href="#" data-i18n="footer.risk">風險提示</a>
+                <a href="#" data-i18n="footer.privacy">隱私政策</a>
+                <a href="#" data-i18n="footer.terms">使用條款</a>
             </div>
         </div>
     </div>
 </footer>
 
+<script src="i18n.js"></script>
 <script>
 // Mobile menu
 const mobileMenuBtn = document.getElementById('mobileMenuBtn');

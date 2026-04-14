@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>德商奇點科技 | Desun Singularity Tech</title>
+    <meta name="description" content="德商奇點科技 — 德商產投(HK.02270)旗下科技金融平台，橫跨數字金融、證券金融與產業金融的全品類資產管理機構。">
+    <meta property="og:title" content="德商奇點科技 | Desun Singularity Tech">
+    <meta property="og:description" content="橫跨數字金融、證券金融與產業金融的全品類資產管理機構">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="images/logo/logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -15,14 +21,15 @@
 <nav class="navbar" id="navbar">
     <div class="container nav-container">
         <a href="/" class="nav-logo">
+            <img src="images/logo/logo-white.png" alt="Desun Singularity" class="logo-img">
             <span class="logo-text">DESUN SINGULARITY</span>
         </a>
         <ul class="nav-links">
-            <li><a href="#home" class="active">首頁</a></li>
-            <li><a href="products.html">產品與服務</a></li>
-            <li><a href="about.html">關於我們</a></li>
-            <li><a href="news.html">新聞動態</a></li>
-            <li><a href="contact.html">聯繫我們</a></li>
+            <li><a href="#home" class="active" data-i18n="nav.home">首頁</a></li>
+            <li><a href="products.html" data-i18n="nav.products">產品與服務</a></li>
+            <li><a href="about.html" data-i18n="nav.about">關於我們</a></li>
+            <li><a href="news.html" data-i18n="nav.news">新聞動態</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">聯繫我們</a></li>
         </ul>
         <div class="nav-right">
             <div class="lang-switcher">
@@ -42,11 +49,11 @@
 <!-- Mobile Menu -->
 <div class="mobile-menu" id="mobileMenu">
     <ul>
-        <li><a href="#home">首頁</a></li>
-        <li><a href="products.html">產品與服務</a></li>
-        <li><a href="about.html">關於我們</a></li>
-        <li><a href="news.html">新聞動態</a></li>
-        <li><a href="contact.html">聯繫我們</a></li>
+        <li><a href="#home" data-i18n="nav.home">首頁</a></li>
+        <li><a href="products.html" data-i18n="nav.products">產品與服務</a></li>
+        <li><a href="about.html" data-i18n="nav.about">關於我們</a></li>
+        <li><a href="news.html" data-i18n="nav.news">新聞動態</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">聯繫我們</a></li>
     </ul>
 </div>
 
@@ -54,12 +61,12 @@
 <section class="hero" id="home">
     <div class="hero-bg"></div>
     <div class="container hero-content">
-        <p class="hero-endorsement">德商產投集團（02270.HK）旗下科技金融平台</p>
-        <h1 class="hero-title">從產業運營到數字金融</h1>
-        <p class="hero-subtitle">橫跨實體與數字的全品類資產管理</p>
+        <p class="hero-endorsement" data-i18n="home.endorsement">德商產投集團（02270.HK）旗下科技金融平台</p>
+        <h1 class="hero-title" data-i18n="home.title">從產業運營到數字金融</h1>
+        <p class="hero-subtitle" data-i18n="home.subtitle">橫跨實體與數字的全品類資產管理</p>
         <div class="hero-cta">
-            <a href="products.html" class="btn btn-primary">了解我們的服務</a>
-            <a href="contact.html" class="btn btn-outline">聯繫專屬顧問</a>
+            <a href="products.html" class="btn btn-primary" data-i18n="home.cta_services">了解我們的服務</a>
+            <a href="contact.html" class="btn btn-outline" data-i18n="home.cta_contact">聯繫專屬顧問</a>
         </div>
     </div>
     <div class="hero-scroll-hint">
@@ -75,30 +82,30 @@
             <div class="data-card">
                 <div class="data-number-row">
                     <span class="data-number" data-target="2000">0</span>
-                    <span class="data-unit">億+</span>
+                    <span class="data-unit" data-i18n="home.data_unit_yi">億+</span>
                 </div>
-                <div class="data-label">在管資產（RMB）</div>
+                <div class="data-label" data-i18n="home.data_label_aum">在管資產（RMB）</div>
             </div>
             <div class="data-card">
                 <div class="data-number-row">
                     <span class="data-number-text">5</span>
-                    <span class="data-unit">項</span>
+                    <span class="data-unit" data-i18n="home.data_unit_xiang">項</span>
                 </div>
-                <div class="data-label">SFC 牌照</div>
+                <div class="data-label" data-i18n="home.data_label_sfc">SFC 牌照</div>
             </div>
             <div class="data-card">
                 <div class="data-number-row">
                     <span class="data-number-text">7×24</span>
-                    <span class="data-unit">全天候</span>
+                    <span class="data-unit" data-i18n="home.data_unit_allday">全天候</span>
                 </div>
-                <div class="data-label">量化策略運行</div>
+                <div class="data-label" data-i18n="home.data_label_quant">量化策略運行</div>
             </div>
             <div class="data-card">
                 <div class="data-number-row">
                     <span class="data-number-text">10+</span>
-                    <span class="data-unit">策略</span>
+                    <span class="data-unit" data-i18n="home.data_unit_strategy">策略</span>
                 </div>
-                <div class="data-label">覆蓋 3 大市場</div>
+                <div class="data-label" data-i18n="home.data_label_market">覆蓋 3 大市場</div>
             </div>
         </div>
     </div>
@@ -108,8 +115,8 @@
 <section class="section section-white" id="services">
     <div class="container">
         <div class="section-header">
-            <h2 class="section-title">全品類資產管理</h2>
-            <p class="section-subtitle">橫跨數字金融、證券金融與產業金融，提供全方位資產管理服務</p>
+            <h2 class="section-title" data-i18n="home.services_title">全品類資產管理</h2>
+            <p class="section-subtitle" data-i18n="home.services_subtitle">橫跨數字金融、證券金融與產業金融，提供全方位資產管理服務</p>
         </div>
         <div class="services-grid">
             <a href="products.html#digital" class="service-card">
@@ -119,8 +126,8 @@
                         <path d="M32 16H42V22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </div>
-                <h3 class="service-title">數字金融</h3>
-                <p class="service-desc">量化策略驅動，深耕加密市場</p>
+                <h3 class="service-title" data-i18n="home.svc_digital">數字金融</h3>
+                <p class="service-desc" data-i18n="home.svc_digital_desc">量化策略驅動，深耕加密市場</p>
                 <span class="service-arrow">&rarr;</span>
             </a>
             <a href="products.html#securities" class="service-card">
@@ -132,8 +139,8 @@
                         <path d="M20 18L14 30M28 18L34 30" stroke="currentColor" stroke-width="2"/>
                     </svg>
                 </div>
-                <h3 class="service-title">證券金融</h3>
-                <p class="service-desc">TRS、場外期權，靈活定制的衍生品方案</p>
+                <h3 class="service-title" data-i18n="home.svc_securities">證券金融</h3>
+                <p class="service-desc" data-i18n="home.svc_securities_desc">TRS、場外期權，靈活定制的衍生品方案</p>
                 <span class="service-arrow">&rarr;</span>
             </a>
             <a href="products.html#industrial" class="service-card">
@@ -145,8 +152,8 @@
                         <path d="M4 42H46" stroke="currentColor" stroke-width="2"/>
                     </svg>
                 </div>
-                <h3 class="service-title">產業金融</h3>
-                <p class="service-desc">被低估資產的價值發現、運營與變現</p>
+                <h3 class="service-title" data-i18n="home.svc_industrial">產業金融</h3>
+                <p class="service-desc" data-i18n="home.svc_industrial_desc">被低估資產的價值發現、運營與變現</p>
                 <span class="service-arrow">&rarr;</span>
             </a>
         </div>
@@ -157,28 +164,28 @@
 <section class="section section-dark" id="why-us">
     <div class="container">
         <div class="section-header">
-            <h2 class="section-title">為什麼選擇我們</h2>
+            <h2 class="section-title" data-i18n="home.why_title">為什麼選擇我們</h2>
         </div>
         <div class="why-grid">
             <div class="why-card">
                 <div class="why-number">01</div>
-                <h3 class="why-title">上市公司背書</h3>
-                <p class="why-desc">母公司德商產投 (HK.02270)，主板上市，治理透明</p>
+                <h3 class="why-title" data-i18n="home.why1_title">上市公司背書</h3>
+                <p class="why-desc" data-i18n="home.why1_desc">母公司德商產投 (HK.02270)，主板上市，治理透明</p>
             </div>
             <div class="why-card">
                 <div class="why-number">02</div>
-                <h3 class="why-title">多牌照合規</h3>
-                <p class="why-desc">香港 SFC 牌照 + 開曼基金 + SRP，覆蓋證券、期貨、資管及基金業務</p>
+                <h3 class="why-title" data-i18n="home.why2_title">多牌照合規</h3>
+                <p class="why-desc" data-i18n="home.why2_desc">香港 SFC 牌照 + 開曼基金 + SRP，覆蓋證券、期貨、資管及基金業務</p>
             </div>
             <div class="why-card">
                 <div class="why-number">03</div>
-                <h3 class="why-title">2000億+在管規模</h3>
-                <p class="why-desc">橫跨實體不動產與數字資產，經過驗證的資管能力</p>
+                <h3 class="why-title" data-i18n="home.why3_title">2000億+在管規模</h3>
+                <p class="why-desc" data-i18n="home.why3_desc">橫跨實體不動產與數字資產，經過驗證的資管能力</p>
             </div>
             <div class="why-card">
                 <div class="why-number">04</div>
-                <h3 class="why-title">專業團隊</h3>
-                <p class="why-desc">核心成員來自頭部交易所與金融機構，平均 10 年+ 行業經驗</p>
+                <h3 class="why-title" data-i18n="home.why4_title">專業團隊</h3>
+                <p class="why-desc" data-i18n="home.why4_desc">核心成員來自頭部交易所與金融機構，平均 10 年+ 行業經驗</p>
             </div>
         </div>
     </div>
@@ -188,7 +195,7 @@
 <section class="section section-white" id="ecosystem">
     <div class="container">
         <div class="section-header">
-            <h2 class="section-title">德商控股生態矩陣</h2>
+            <h2 class="section-title" data-i18n="home.eco_title">德商控股生態矩陣</h2>
         </div>
         <div class="eco-wall">
             <div class="eco-brick eco-core">DESUN 德商</div>
@@ -232,30 +239,33 @@
 <section class="section section-light" id="news">
     <div class="container">
         <div class="section-header">
-            <h2 class="section-title">新聞動態</h2>
+            <h2 class="section-title" data-i18n="home.news_title">新聞動態</h2>
         </div>
         <div class="news-grid">
-            <article class="news-card">
+            <a href="news.html" class="news-card news-card-clickable">
                 <div class="news-date">2026.03</div>
-                <h3 class="news-title">量化策略實盤運行，多策略組合穩健表現</h3>
-                <p class="news-excerpt">數字金融板塊量化資管業務正式進入實盤階段，多策略組合在市場波動中保持穩健收益...</p>
-                <a href="#" class="news-link">閱讀全文 &rarr;</a>
-            </article>
-            <article class="news-card">
+                <h3 class="news-title" data-i18n="home.news1_title">量化策略實盤運行，多策略組合穩健表現</h3>
+                <p class="news-excerpt" data-i18n="home.news1_excerpt">數字金融板塊量化資管業務正式進入實盤階段，多策略組合在市場波動中保持穩健收益...</p>
+                <span class="news-source">公司動態</span>
+                <span class="news-link" data-i18n="home.news_readmore">閱讀全文 &rarr;</span>
+            </a>
+            <a href="news.html" class="news-card news-card-clickable">
                 <div class="news-date">2025.Q4</div>
-                <h3 class="news-title">戰略入股高盈證券，打通多牌照合規通路</h3>
-                <p class="news-excerpt">德商奇點科技完成對高盈證券的戰略投資，獲取香港 SFC 多項牌照資質...</p>
-                <a href="#" class="news-link">閱讀全文 &rarr;</a>
-            </article>
-            <article class="news-card">
+                <h3 class="news-title" data-i18n="home.news2_title">戰略入股高盈證券，打通多牌照合規通路</h3>
+                <p class="news-excerpt" data-i18n="home.news2_excerpt">德商奇點科技完成對高盈證券的戰略投資，獲取香港 SFC 多項牌照資質...</p>
+                <span class="news-source">公司動態</span>
+                <span class="news-link" data-i18n="home.news_readmore">閱讀全文 &rarr;</span>
+            </a>
+            <a href="news.html" class="news-card news-card-clickable">
                 <div class="news-date">2025.Q2</div>
-                <h3 class="news-title">德商奇點科技正式成立</h3>
-                <p class="news-excerpt">依托德商產投集團（HK.02270）深厚的產業資源，德商奇點科技在香港正式成立...</p>
-                <a href="#" class="news-link">閱讀全文 &rarr;</a>
-            </article>
+                <h3 class="news-title" data-i18n="home.news3_title">德商奇點科技正式成立</h3>
+                <p class="news-excerpt" data-i18n="home.news3_excerpt">依托德商產投集團（HK.02270）深厚的產業資源，德商奇點科技在香港正式成立...</p>
+                <span class="news-source">公司動態</span>
+                <span class="news-link" data-i18n="home.news_readmore">閱讀全文 &rarr;</span>
+            </a>
         </div>
         <div class="section-cta">
-            <a href="news.html" class="btn btn-secondary">查看全部 &rarr;</a>
+            <a href="news.html" class="btn btn-secondary" data-i18n="home.news_all">查看全部 &rarr;</a>
         </div>
     </div>
 </section>
@@ -265,32 +275,32 @@
     <div class="container">
         <div class="footer-grid">
             <div class="footer-col">
-                <h4 class="footer-heading">產品與服務</h4>
+                <h4 class="footer-heading" data-i18n="footer.products">產品與服務</h4>
                 <ul class="footer-links">
-                    <li><a href="products.html#digital">數字金融</a></li>
-                    <li><a href="products.html#securities">證券金融</a></li>
-                    <li><a href="products.html#industrial">產業金融</a></li>
+                    <li><a href="products.html#digital" data-i18n="footer.digital">數字金融</a></li>
+                    <li><a href="products.html#securities" data-i18n="footer.securities">證券金融</a></li>
+                    <li><a href="products.html#industrial" data-i18n="footer.industrial">產業金融</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4 class="footer-heading">關於我們</h4>
+                <h4 class="footer-heading" data-i18n="footer.about">關於我們</h4>
                 <ul class="footer-links">
-                    <li><a href="about.html">公司簡介</a></li>
-                    <li><a href="about.html#team">團隊介紹</a></li>
-                    <li><a href="about.html#compliance">合規與牌照</a></li>
-                    <li><a href="about.html#careers">招聘</a></li>
+                    <li><a href="about.html" data-i18n="footer.company">公司簡介</a></li>
+                    <li><a href="about.html#team" data-i18n="footer.team">團隊介紹</a></li>
+                    <li><a href="about.html#compliance" data-i18n="footer.compliance">合規與牌照</a></li>
+                    <li><a href="about.html#careers" data-i18n="footer.careers">招聘</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4 class="footer-heading">聯繫方式</h4>
+                <h4 class="footer-heading" data-i18n="footer.contact_heading">聯繫方式</h4>
                 <ul class="footer-links">
                     <li>contact@desunweb3.com</li>
-                    <li>香港灣仔告士打道 38 號</li>
-                    <li>萬通保險中心 1701</li>
+                    <li data-i18n="footer.address1">香港灣仔告士打道 38 號</li>
+                    <li data-i18n="footer.address2">萬通保險中心 1701</li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4 class="footer-heading">關注我們</h4>
+                <h4 class="footer-heading" data-i18n="footer.follow">關注我們</h4>
                 <ul class="footer-links">
                     <li><a href="#">LinkedIn</a></li>
                     <li><a href="#">Twitter</a></li>
@@ -299,16 +309,17 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 德商奇點科技 Desun Singularity Tech. All rights reserved.</p>
+            <p data-i18n="footer.copyright">&copy; 2026 德商奇點科技 Desun Singularity Tech. All rights reserved.</p>
             <div class="footer-legal">
-                <a href="#">風險提示</a>
-                <a href="#">隱私政策</a>
-                <a href="#">使用條款</a>
+                <a href="#" data-i18n="footer.risk">風險提示</a>
+                <a href="#" data-i18n="footer.privacy">隱私政策</a>
+                <a href="#" data-i18n="footer.terms">使用條款</a>
             </div>
         </div>
     </div>
 </footer>
 
+<script src="i18n.js"></script>
 <script>
 // Navbar scroll effect
 const navbar = document.getElementById('navbar');
