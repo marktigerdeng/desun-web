@@ -706,6 +706,10 @@ ul {
     color: var(--white);
 }
 
+.footer-heading-sub {
+    margin-top: 24px;
+}
+
 .footer-bottom {
     display: flex;
     justify-content: space-between;

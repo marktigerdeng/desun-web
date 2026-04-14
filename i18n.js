@@ -8,6 +8,7 @@
             'footer.company': '公司簡介', 'footer.team': '團隊介紹', 'footer.compliance': '合規與牌照', 'footer.careers': '招聘',
             'footer.address1': '香港灣仔告士打道 38 號', 'footer.address2': '萬通保險中心 1701',
             'footer.copyright': '\u00a9 2026 德商奇點科技 Desun Singularity Tech. All rights reserved.',
+            'footer.group': '集團官網', 'footer.group_parent': '德商產投控股',
             'footer.risk': '風險提示', 'footer.privacy': '隱私政策', 'footer.terms': '使用條款',
 
             'home.endorsement': '德商產投集團（02270.HK）旗下科技金融平台',
@@ -139,6 +140,7 @@
             'footer.company': '公司简介', 'footer.team': '团队介绍', 'footer.compliance': '合规与牌照', 'footer.careers': '招聘',
             'footer.address1': '香港湾仔告士打道 38 号', 'footer.address2': '万通保险中心 1701',
             'footer.copyright': '\u00a9 2026 德商奇点科技 Desun Singularity Tech. All rights reserved.',
+            'footer.group': '集团官网', 'footer.group_parent': '德商产投控股',
             'footer.risk': '风险提示', 'footer.privacy': '隐私政策', 'footer.terms': '使用条款',
 
             'home.endorsement': '德商产投集团（02270.HK）旗下科技金融平台',
@@ -270,6 +272,7 @@
             'footer.company': 'Overview', 'footer.team': 'Team', 'footer.compliance': 'Compliance', 'footer.careers': 'Careers',
             'footer.address1': '38 Gloucester Road, Wan Chai', 'footer.address2': 'Magnolia House 1701, Hong Kong',
             'footer.copyright': '\u00a9 2026 Desun Singularity Tech. All rights reserved.',
+            'footer.group': 'Group Website', 'footer.group_parent': 'Desun Holdings',
             'footer.risk': 'Risk Disclosure', 'footer.privacy': 'Privacy Policy', 'footer.terms': 'Terms of Use',
 
             'home.endorsement': 'Fintech platform of Desun Property Investment (02270.HK)',
