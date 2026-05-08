@@ -838,7 +838,7 @@ ul {
 
 .service-detail-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 24px;
     margin-bottom: 48px;
 }
@@ -1656,16 +1656,6 @@ ul {
     border-color: var(--blue);
     box-shadow: 0 12px 48px rgba(37, 99, 235, 0.12);
     transform: translateY(-6px);
-}
-
-.service-detail-grid-3 {
-    grid-template-columns: repeat(3, 1fr);
-}
-
-@media (max-width: 768px) {
-    .service-detail-grid-3 {
-        grid-template-columns: 1fr;
-    }
 }
 
 .service-detail-card {
